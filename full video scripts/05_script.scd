@@ -41,7 +41,7 @@ If we perform mathematical operations involving two multichannel UGens, then the
 (
 x = {
 	var amp, sig;
-	amp = SinOsc.kr([7,1]).range(0,1);
+	amp = SinOsc.kr([7,10]).range(0,1);
 	sig = SinOsc.ar([300,500]);
 	sig = sig * amp;
 }.play;
@@ -147,8 +147,8 @@ Splay is a UGen somewhat similar to Mix, but instead of mixing down to a single 
 (
 x = {
 	var amp, sig;
-	amp = SinOsc.kr([7, 1, 2, 0.2, 6]).range(0,1);
-	sig = SinOsc.ar([300, 500, 700, 900, 1100]);
+	amp = SinOsc.kr([7, 1, 2, 0.2, 6]).range(0,0.8);
+	sig = SinOsc.ar([300, 500, 700, 900, 1100]/2);
 	sig = sig * amp;
 	sig = Splay.ar(sig) * 0.25;
 }.play;

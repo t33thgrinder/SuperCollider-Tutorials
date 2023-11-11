@@ -261,7 +261,7 @@ We can add another statement within the iteration block to have the amplitude of
 
 (
 SynthDef.new(\iter2, {
-	arg freq=200;
+	arg freq=50;
 	var temp, sum;
 	sum = 0;
 	10.do{
